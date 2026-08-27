@@ -1,3 +1,12 @@
+# OctoFit Tracker frontend
+
+Create `octofit-tracker/frontend/.env.local` with the Codespace name before running the app:
+
+```env
+VITE_CODESPACE_NAME=your-codespace-name
+```
+
+Vite exposes this value through `import.meta.env`. The frontend uses it to call `https://${VITE_CODESPACE_NAME}-8000.app.github.dev/api/[component]/`. When it is unset, the app uses `http://localhost:8000` on localhost and shows a configuration error elsewhere instead of requesting an `undefined` host.
 # React + TypeScript + Vite
 
 ## API configuration
